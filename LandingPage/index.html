@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>McDonald's</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+
+            <header>
+                <a href="#"><img src="logo.jpg" class = "logo" height="70"></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>
+                        It's not just <span class="red">Burger</span> <br>
+                        It's <span class="yellow">McDonald's</span>
+                    </h2>
+                    <p>Welcome to McDonald's, where delicious moments are made! Our iconic 
+golden arches have been a symbol of great taste and convenience for 
+generations. At McDonald's, we're committed to serving up your 
+favorites with a side of smiles. 
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+               
+            </div>
+            <div class="imgBox">
+                <img src="burger.png" class="burger" > 
+            </div>
+            <ul class="thumb">
+                <li><img src="burger.png" onclick="imgSlider('burger.png');changeColor('#FEC400')"></li>
+                <li><img src="spicy.png" onclick="imgSlider('spicy.png');changeColor('#00a42c')"></li>
+                <li><img src="veggie.png" onclick="imgSlider('veggie.png');changeColor('#fe7200')"></li>
+
+            </ul>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/mcdonalds/"><img src="insta.png"></a></li>
+                <li><a href="https://twitter.com/McDonalds"><img src="twitter.png"></a></li>
+                <li><a href="https://www.facebook.com/McDonalds/"><img src="facebook.png"></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector(".burger").src = anything;
+            }
+            function changeColor(color){
+                const circle2 = document.querySelector('.circle2');
+                circle2.style.background = color;
+            }
+        </script>
+    </body>
+</html>
